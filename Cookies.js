@@ -57,7 +57,7 @@ function allCookiesList(){
 function hasCookie(cookieName){
     var allCookies2D = allCookiesList();
     for(i = 0; i < allCookies2D.length; i++){
-        if(allCookies2D[i][0] == cookieName){
+        if(allCookies2D[i]['cookieKey'] == cookieName){
             return true;
         }
     }

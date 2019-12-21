@@ -14,12 +14,23 @@ var topScoresDiv = document.getElementById("topScoresDisplay");
 
 var TopScoresTable_Body = document.getElementById("tableScoresData");
 
-function fillTopScores(TopScoresTable_Body){
+function fillTopScores(TopScoresTable_Body, totalScore, PlayerName){
+    if(hasCookie(PlayerName)){
+        var cookieValue = getCookie(PlayerName);
+        if(cookieValue < totalScore){
+            updateCookie(PlayerName, totalScore, 20);
+        }
+    }else{
+        setCookie(PlayerName, totalScore, 20);
+    }
     allCookiesData = allCookiesList();
     allCookiesData.sort(function(a,b){return parseInt(b.cookieValue) - parseInt(a.cookieValue)});
-    
-    TopScoresTable_Body.innerHTML = "";
+    if(allCookiesData.length > 5){
+        var old_value = allCookiesData.pop();
+        deleteCookie(old_value['cookieKey']);
+    }
 
+    TopScoresTable_Body.innerHTML = "";
     for(i = 0; i < allCookiesData.length; i++){
         TopScoresTable_Body.innerHTML += "<tr><td>"+ allCookiesData[i]['cookieKey'] +"</td><td>"+ allCookiesData[i]['cookieValue'] +"</td></tr>";
     }
@@ -39,6 +50,7 @@ function fillTopScores(TopScoresTable_Body){
             fruit.pickLocation();
         }
 
+        //snake.checkCollision() //7otha badl l true f if l ta7t
         if(true){
             clearInterval(timeIntervalChangeSnake);
             window.removeEventListener('keydown', eventClickFunction);
@@ -50,7 +62,9 @@ function fillTopScores(TopScoresTable_Body){
             canvasCTX.shadowBlur = 4;
             canvasCTX.fillText("Game Over", 120, 170);
             topScoresDiv.style.display = "block";
-            fillTopScores(TopScoresTable_Body);
+
+            //TODO: change to the values of player 
+            fillTopScores(TopScoresTable_Body, 27, "mina");
         }
         document.querySelector('.score').innerText = snake.totalScore;
 
