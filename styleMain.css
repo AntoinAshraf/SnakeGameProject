@@ -1,3 +1,7 @@
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 .snakeGameCanvas{
     background-color: #111010;
 }
@@ -11,12 +15,20 @@ div{
     display: inline;
     margin: 10px auto;
 }
-ul{
-    display: inline;
-    font-size: 30px;
+#ulTopScores{
+    margin: 5px auto;
+    font-size: 26px;
+    border: 1px solid steelblue;
+    background-color: steelblue;
+}
+#ulTopScores td, #ulTopScores th{
+    border: 1px solid steelblue;
+    padding: 3px;
+    background-color: white;
+    border-radius: 25%;
 }
 .TopScores{
-    font-size: 50px;
+    font-size: 30px;
     margin-top: 10px;
     margin-bottom: 0px;
 }

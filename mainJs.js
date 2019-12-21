@@ -12,6 +12,19 @@ var ulTopScores = document.getElementById("ulTopScores");
 
 var topScoresDiv = document.getElementById("topScoresDisplay");
 
+var TopScoresTable_Body = document.getElementById("tableScoresData");
+
+function fillTopScores(TopScoresTable_Body){
+    allCookiesData = allCookiesList();
+    allCookiesData.sort(function(a,b){return parseInt(b.cookieValue) - parseInt(a.cookieValue)});
+    
+    TopScoresTable_Body.innerHTML = "";
+
+    for(i = 0; i < allCookiesData.length; i++){
+        TopScoresTable_Body.innerHTML += "<tr><td>"+ allCookiesData[i]['cookieKey'] +"</td><td>"+ allCookiesData[i]['cookieValue'] +"</td></tr>";
+    }
+}
+
 (function setup(){
     snake = new Snake();
     var fruit = new Fruit();
@@ -37,7 +50,7 @@ var topScoresDiv = document.getElementById("topScoresDisplay");
             canvasCTX.shadowBlur = 4;
             canvasCTX.fillText("Game Over", 120, 170);
             topScoresDiv.style.display = "block";
-            fillTopScores();
+            fillTopScores(TopScoresTable_Body);
         }
         document.querySelector('.score').innerText = snake.totalScore;
 
@@ -51,14 +64,4 @@ var eventClickFunction = function(){
 
 window.addEventListener('keydown', eventClickFunction);
 
-function fillTopScores(){
-    allCookiesData = allCookiesList();
-    allCookiesData.sort(function(a,b){return parseInt(a.cookieValue) - parseInt(b.cookieValue)});
-    var htmlTagElement = "";
-    
-    for(i = 0; i < allCookiesData.length; i++){
-        if(allCookiesData[i][1] > snake.totalScore){
-            
-        }
-    }
-}
+
