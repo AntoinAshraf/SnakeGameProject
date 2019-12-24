@@ -6,7 +6,7 @@ var rows = canvasElement.height / scale;
 var cols = canvasElement.width / scale;
 
 var snake;
-var timeIntervalCount = 250;
+var timeIntervalCount = 150;
 var allCookiesData;
 var ulTopScores = document.getElementById("ulTopScores");
 
@@ -51,7 +51,7 @@ function fillTopScores(TopScoresTable_Body, totalScore, PlayerName){
         }
 
         //snake.checkCollision() //7otha badl l true f if l ta7t
-        if(true){
+        if(snake.checkCollision()){
             clearInterval(timeIntervalChangeSnake);
             window.removeEventListener('keydown', eventClickFunction);
             canvasCTX.clearRect(0, 0, canvasElement.width, canvasElement.height);
