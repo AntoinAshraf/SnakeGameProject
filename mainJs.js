@@ -53,12 +53,10 @@ function updateSnake() {
 
     if (snake.totalScore % 5 == 0 && levelIncreaseFlag == false) {
         level++;
-        console.log(level);
         if (timeIntervalCount - 40 > 0) {
             clearInterval(timeIntervalChangeSnake);
             timeIntervalCount -= 40;
             timeIntervalChangeSnake = window.setInterval(updateSnake, timeIntervalCount)
-            console.log(timeIntervalCount);
         }
         levelIncreaseFlag = true;
     }
