@@ -22,6 +22,16 @@ var loginContainerDiv = document.getElementById('LoginContainer');
 var userNameLabel = document.getElementById('name');
 var userNameParag = document.querySelector('.PlayerNameParag');
 
+userNameLabel.addEventListener('keydown', function (e) {
+    
+    if (e.keyCode >= 96 && e.keyCode <= 105) {
+        e.preventDefault();
+    }
+    if(e.keyCode >= 48 && e.keyCode <= 57){
+        e.preventDefault();
+    }
+});
+
 snake = new Snake();
 var fruit = new Fruit();
 fruit.pickLocation();

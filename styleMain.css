@@ -5,10 +5,25 @@
  #LoginContainer {
     box-shadow: 10px 10px 10px 2px rgb(173, 173, 173);
     padding: 20px;
-    width: 200px;
+    width: 290px;
     margin: 0 auto;
     margin-top: 250px;
     border-radius: 1px;
+}
+#LoginContainer>*{
+    text-align: center;
+}
+
+input[type=button]{
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+input[type=button]:hover{
+    cursor: pointer;
 }
 
 .snakeGameCanvas{
@@ -35,7 +50,7 @@ div{
     padding-bottom: 15px;
 }
 input[type=text] {
-    width: 100%;
+    width: 130%;
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
