@@ -1,59 +1,71 @@
 <!DOCTYPE html>
-<html >
-    <head>
-        <title>Snake Game (Antoin & Taha)</title>
-        <link rel="stylesheet" href="styleMain.css">
-    </head>
-    <body>
+<html>
 
+<head>
+    <title>Snake Game (Antoin & Taha)</title>
+    <link rel="stylesheet" href="styleMain.css">
+</head>
+
+<body>
+
+    <div id="LoginContainer">
+        <table id="tableLogin">
+            <tr>
+                <td><label> Player Name:</label></td>
+                <td><input type="text" id="name"></td>
+            </tr>
+            <tr>
+                <td colspan="2" id="Submitbtn" style="text-align: center;"><input type="button" value="Submit"></td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="gameScreen" style="display: none">
         <div>
-            
+            Player Name: <p class="PlayerNameParag"></p><br />
+            Score: <p class="score"></p><br />
+            Level: <p class="levelParag"></p>
         </div>
-
-        <div id="gameScreen" style="display: none">
-            <div>
-                Score: <p class="score"></p><br/>
-                Level: <p class="levelParag"></p>
-            </div>
-            <canvas class="snakeGameCanvas" height="350" width="350" style="background-color: #085255; display: block; margin: 0 auto;"></canvas>
-            <div id="topScoresDisplay">
-                <p class="TopScores">Top Scores: </p>
-                <table id="ulTopScores">
-                    <thead>
-                        <th> Player Name </th>
-                        <th> Score </th>
-                    </thead>
-                    <tbody id="tableScoresData">
-                        <tr> 
-                            <td> Player1 </td>
-                            <td> score1 </td>
-                        </tr>
-                        <tr> 
-                            <td> Player2 </td>
-                            <td> score2 </td>
-                        </tr>
-                        <tr> 
-                            <td> Player3 </td>
-                            <td> score3 </td>
-                        </tr>
-                        <tr> 
-                            <td> Player4 </td>
-                            <td> score4 </td>
-                        </tr>
-                        <tr> 
-                            <td> Player5 </td>
-                            <td> score5 </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+        <canvas class="snakeGameCanvas" height="350" width="350"
+            style="background-color: #085255; display: block; margin: 0 auto;"></canvas>
+        <div id="topScoresDisplay">
+            <p class="TopScores">Top Scores: </p>
+            <table id="ulTopScores">
+                <thead>
+                    <th> Player Name </th>
+                    <th> Score </th>
+                </thead>
+                <tbody id="tableScoresData">
+                    <tr>
+                        <td> Player1 </td>
+                        <td> score1 </td>
+                    </tr>
+                    <tr>
+                        <td> Player2 </td>
+                        <td> score2 </td>
+                    </tr>
+                    <tr>
+                        <td> Player3 </td>
+                        <td> score3 </td>
+                    </tr>
+                    <tr>
+                        <td> Player4 </td>
+                        <td> score4 </td>
+                    </tr>
+                    <tr>
+                        <td> Player5 </td>
+                        <td> score5 </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
+    </div>
 
-        <script src="Cookies.js"></script>
-        <script src="fruit.js"></script>
-        <script src="snakeObject.js"></script>
-        <script src="mainJs.js">
-        </script>
-    </body>
+    <script src="Cookies.js"></script>
+    <script src="fruit.js"></script>
+    <script src="snakeObject.js"></script>
+    <script src="mainJs.js">
+    </script>
+</body>
+
 </html>
-

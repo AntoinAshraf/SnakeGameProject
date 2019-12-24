@@ -2,6 +2,15 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+ #LoginContainer {
+    box-shadow: 10px 10px 10px 2px rgb(173, 173, 173);
+    padding: 20px;
+    width: 330px;
+    margin: 0 auto;
+    margin-top: 250px;
+    border-radius: 1px;
+}
+
 .snakeGameCanvas{
     background-color: #111010;
 }
@@ -11,7 +20,7 @@ div{
     margin-top: 20px;
     margin-bottom: 30px;
 }
-.score, .levelParag{
+.score, .levelParag, .PlayerNameParag{
     display: inline;
     margin: 10px auto;
 }
@@ -20,6 +29,9 @@ div{
     font-size: 26px;
     border: 1px solid steelblue;
     background-color: steelblue;
+}
+#tableLogin tr>*{
+    font-size: 20px;
 }
 #ulTopScores td, #ulTopScores th{
     border: 1px solid steelblue;
