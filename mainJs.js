@@ -83,10 +83,14 @@ function updateSnake() {
 }
 
 LoginBtn.addEventListener('click', function () {
-    userNameParag.innerText = userNameLabel.value;
-    GameScreenDiv.style.display = 'block';
-    loginContainerDiv.style.display = 'none';
-    timeIntervalChangeSnake = window.setInterval(updateSnake, timeIntervalCount);
+    if(userNameLabel.value != ""){
+        userNameParag.innerText = userNameLabel.value;
+        GameScreenDiv.style.display = 'block';
+        loginContainerDiv.style.display = 'none';
+        timeIntervalChangeSnake = window.setInterval(updateSnake, timeIntervalCount);
+    }else{
+        alert("Your name is required");
+    }
 });
 
 function fillTopScores(TopScoresTable_Body, totalScore, PlayerName) {
