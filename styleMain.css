@@ -5,7 +5,7 @@
  #LoginContainer {
     box-shadow: 10px 10px 10px 2px rgb(173, 173, 173);
     padding: 20px;
-    width: 330px;
+    width: 200px;
     margin: 0 auto;
     margin-top: 250px;
     border-radius: 1px;
@@ -32,6 +32,14 @@ div{
 }
 #tableLogin tr>*{
     font-size: 20px;
+    padding-bottom: 15px;
+}
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    
 }
 #ulTopScores td, #ulTopScores th{
     border: 1px solid steelblue;
