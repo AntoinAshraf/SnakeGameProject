@@ -11,7 +11,7 @@ div{
     margin-top: 20px;
     margin-bottom: 30px;
 }
-.score{
+.score, .levelParag{
     display: inline;
     margin: 10px auto;
 }
